@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import Logo from "./logo";
 import { GrSearch } from "react-icons/gr";
 import { FaRegCircleUser } from "react-icons/fa6";
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="h-16 shadow-md bg-white fixed w-full z-40">
+    <header className="h-16 shadow-md bg-white  w-full z-40">
       <div className=" h-full container mx-auto flex items-center px-4 justify-between">
         <div className="">
           <Link to={"/"}>
