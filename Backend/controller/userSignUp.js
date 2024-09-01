@@ -1,5 +1,6 @@
 const userModel = require("../model/userModel.js");
 const bcrypt = require("bcryptjs");
+var jwt = require("jsonwebtoken");
 
 async function userSignUpController(req, res) {
   try {
@@ -34,6 +35,7 @@ async function userSignUpController(req, res) {
 
     const payload = {
       ...req.body,
+      role: "GENERAL",
       password: hashPassword,
     };
 
