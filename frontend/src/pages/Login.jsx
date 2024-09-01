@@ -21,6 +21,13 @@ const Login = () => {
       };
     });
   };
+
+  const handlesubmit = (e) => {
+    e.preventDefault();
+  };
+
+  
+  console.log("data login", data);
   return (
     <section id="login">
       <div className="mx-auto container p-4">
@@ -29,7 +36,7 @@ const Login = () => {
             <img src={loginIcons} alt="login icons" />
           </div>
 
-          <form className="pt-6 flex flex-col gap-2">
+          <form className="pt-6 flex flex-col gap-2" onSubmit={handlesubmit}>
             <div className="grid">
               <label>Email : </label>
               <div className="bg-slate-100 p-2">
@@ -51,6 +58,8 @@ const Login = () => {
                   type={showpassword ? "text" : "password"}
                   placeholder="enter password"
                   name="password"
+                  value={data.password}
+                  onChange={handleOnChange}
                   className="w-full h-full outline-none bg-transparent"
                 />
                 <div
